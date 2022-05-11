@@ -1,22 +1,21 @@
 @extends('wrappers.wrapper')
 
 @section('header')
-    <header class="bg-gray-300">
+    <header>
         <div class="flex flex-row items-center justify-between container mx-auto my-4">
-            <nav>
-                <a href="{{ route('homepage') }}">
-                    <span class="text-primary text-2xl font-black uppercase">KONEK</span>
+            <nav class="font-medium">
+                <a href="{{ route('index') }}">
+                    <span class="text-primary">FlatIron Cyber</span>
                 </a>
             </nav>
-            <nav class="flex flex-row gap-4 items-center">
-                <a href="/" class="button primary-button">
-                    <i class="fa-solid fa-truck-ramp-box"></i>
-                    <span>Book a Delivery</span>
+            <nav class="flex flex-row gap-4 items-center font-medium">
+                <a href="/" class="">
+                    <i class="fa-solid fa-sign-in-alt text-xs"></i>
+                    <span>Sign In</span>
                 </a>
-                <a href="/" class="flex flex-row items-center gap-2">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <span>My Account</span>
-                    <i class="fa-solid fa-chevron-down text-gray-500"></i>
+                <a href="/" class="">
+                    <i class="fa-solid fa-user-plus text-xs"></i>
+                    <span>Sign Up</span>
                 </a>
             </nav>
         </div>
@@ -32,7 +31,7 @@
 @section('footer')
     <footer class="bg-gray-300">
         <div class="container text-center mx-auto my-4">
-            Copyright <a href="{{ route('homepage') }}">KONEK</a> {{ date('Y') }}. All rights reserved.
+            Copyright <a href="{{ route('index') }}">FlatIron Cyber</a> {{ date('Y') }}. All rights reserved.
         </div>
     </footer>
 @endsection
