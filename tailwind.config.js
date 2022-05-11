@@ -7,6 +7,17 @@ module.exports = {
     ],
     darkMode: "media",
     theme: {
+        container: {
+            center: true,
+            padding: "1rem",
+            screens: {
+                sm: "40rem",
+                md: "48rem",
+                lg: "64rem",
+                xl: "64rem",
+                "2xl": "64rem",
+            },
+        },
         extend: {
             colors: {
                 primary: "#0063b2",
