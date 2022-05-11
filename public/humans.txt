@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Japa Alekhin Llemos -- Lead Developer -- @japalekhin
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    JS, CSS3, HTML5
+    Apache Server Configs, Vue.js, Lodash
+    FontAwesome, Tailwind CSS
