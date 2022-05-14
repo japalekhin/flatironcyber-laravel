@@ -4,7 +4,6 @@
 
 import vue from "./modules/vue";
 
-ui.initialize();
 vue.initialize();
 
 /**
