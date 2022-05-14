@@ -7,3 +7,7 @@
 @import "~@fortawesome/fontawesome-free/css/solid";
 @import "~@fortawesome/fontawesome-free/css/brands";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,400&display=swap");
+
+.bg-index-hero {
+  background-image: url('/img/flatiron-cyber-hero.svg');
+}

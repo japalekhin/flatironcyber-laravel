@@ -1,5 +1,7 @@
-@extends('layouts.default')
+@extends('layouts.index')
 
 @section('content')
-    asdf
+    <div class="hero">
+
+    </div>
 @endsection
