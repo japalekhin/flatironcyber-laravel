@@ -1,25 +1,7 @@
 @extends('wrappers.wrapper')
 
 @section('header')
-    <header>
-        <div class="flex flex-row items-center justify-between container mx-auto my-4">
-            <nav class="font-medium">
-                <a href="{{ route('index') }}">
-                    <span class="text-primary">FlatIron Cyber</span>
-                </a>
-            </nav>
-            <nav class="flex flex-row gap-4 items-center font-medium">
-                <a href="/" class="">
-                    <i class="fa-solid fa-sign-in-alt text-xs"></i>
-                    <span>Sign In</span>
-                </a>
-                <a href="/" class="">
-                    <i class="fa-solid fa-user-plus text-xs"></i>
-                    <span>Sign Up</span>
-                </a>
-            </nav>
-        </div>
-    </header>
+    @include('partials.header-navigation')
 @endsection
 
 @section('body')
