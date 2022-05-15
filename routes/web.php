@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiKeysController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
@@ -18,3 +19,4 @@ use App\Http\Controllers\IndexController;
 IndexController::setupRoutes();
 AuthController::setupRoutes();
 DashboardController::setupRoutes();
+ApiKeysController::setupRoutes();

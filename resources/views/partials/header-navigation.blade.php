@@ -5,7 +5,8 @@
                 {{ env('APP_NAME', __('FlatIron Cyber')) }}
             </a>
             @if (Auth::check())
-                <a href="/dashboard">{{ __('Dashboard') }}</a>
+                <a href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
+                <a href="{{ route('api-keys.index') }}">{{ __('API Keys') }}</a>
             @endif
         </nav>
         <nav class="flex flex-row gap-4 items-center">
