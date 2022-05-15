@@ -13,7 +13,7 @@
 }
 
 .button {
-    @apply px-3 py-2 font-medium rounded;
+    @apply px-5 py-3 font-medium rounded;
 
     &.button-primary {
         @apply bg-primary text-white;
