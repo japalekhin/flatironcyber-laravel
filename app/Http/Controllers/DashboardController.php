@@ -10,12 +10,13 @@ class DashboardController extends Controller
 {
     public static function setupRoutes()
     {
-        Route::controller(self::class)->group(function () {
+        Route::controller(self::class)->middleware('auth')->group(function () {
             Route::get(RouteServiceProvider::HOME, 'getDashboard')->name('dashboard');
         });
     }
 
-    public function getDashboard() {
+    public function getDashboard()
+    {
         return view('dashboard');
     }
 }

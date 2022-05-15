@@ -1,5 +1,5 @@
-<footer class="bg-gray-300">
-    <div class="container text-center mx-auto my-4">
+<footer class="bg-[#1d3557] text-white pt-6 pb-10">
+    <div class="container text-center">
         Copyright <a href="{{ route('index') }}">FlatIron Cyber</a> {{ date('Y') }}. All rights reserved.
     </div>
 </footer>

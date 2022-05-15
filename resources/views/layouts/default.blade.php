@@ -1,7 +1,9 @@
 @extends('wrappers.wrapper')
 
 @section('header')
-    @include('partials.header-navigation')
+    <header class="bg-primary text-white">
+        @include('partials.header-navigation')
+    </header>
 @endsection
 
 @section('body')
