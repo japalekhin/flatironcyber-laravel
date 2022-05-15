@@ -5,7 +5,7 @@
 @endsection
 
 @section('body')
-    <main class="flex-grow">
+    <main class="flex-grow flex flex-col">
         @yield('content')
     </main>
 @endsection
