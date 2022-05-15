@@ -2,8 +2,10 @@
 // window.axios = require("axios");
 // window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
+import ui from './modules/ui';
 import vue from "./modules/vue";
 
+ui.initialize();
 vue.initialize();
 
 /**
