@@ -1,7 +1,7 @@
 <header>
     <div class="flex flex-row items-center justify-between container my-4">
         <nav class="flex flex-row gap-4 items-center">
-            <a href="{{ route('index') }}" class="font-medium">
+            <a href="{{ route('index') }}" class="font-medium uppercase">
                 {{ env('APP_NAME', __('FlatIron Cyber')) }}
             </a>
             @if (Auth::check())
