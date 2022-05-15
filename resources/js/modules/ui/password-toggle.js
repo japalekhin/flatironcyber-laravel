@@ -1,5 +1,4 @@
 export default () => {
-    console.log('initializing');
     document.addEventListener("click", (event) => {
         event.path
             .filter(
