@@ -17,12 +17,12 @@ class AuthController extends Controller
         Route::controller(LoginController::class)->group(function () {
             Route::get('/sign-in', 'showLoginForm')->name('login');
             Route::post('/sign-in', 'login')->name('postLogin');
-            Route::post('/sign-out', 'logout')->name('logout');
+            Route::any('/sign-out', 'logout')->name('logout');
         });
 
         Route::controller(RegisterController::class)->group(function () {
             Route::get('/sign-up', 'showRegistrationForm')->name('register');
-            Route::post('/sign-up', 'register');
+            Route::post('/sign-up', 'register')->name('postRegister');
         });
 
         Route::controller(ForgotPasswordController::class)->group(function () {
