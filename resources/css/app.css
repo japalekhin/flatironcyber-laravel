@@ -12,39 +12,6 @@
     background-image: url("/img/flatiron-cyber-hero.svg");
 }
 
-.m-field-row {
-    @apply mt-4 mb-6;
-}
-
-.input-field {
-    @apply relative pt-6 m-field-row;
-    input {
-        @apply w-full bg-gray-50 px-3 py-1.5 border-b-2 border-gray-300 rounded-t focus:outline-none focus:border-primary placeholder-transparent;
-    }
-    label {
-        @apply absolute top-0 left-3 text-sm text-primary transition-all
-            hover:cursor-text
-            peer-focus:text-sm peer-focus:top-0 peer-focus:text-primary
-            peer-placeholder-shown:top-[1.875rem] peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400;
-    }
-    .error-message {
-        @apply text-danger text-sm font-light;
-    }
-    &[password-toggle] {
-        button[password-toggle-button] {
-            @apply absolute right-2 top-[1.875rem] bg-gray-50 text-gray-400 hover:text-gray-600 px-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2;
-        }
-    }
-}
-
-.check-field {
-    @apply m-field-row;
-
-    input[type=checkbox] {
-        @apply mr-2;
-    }
-}
-
 .button {
     @apply px-3 py-2 font-medium rounded;
 
@@ -55,6 +22,51 @@
     i.fa-solid,
     i.fa-regular,
     i.fa-brands {
+        @apply mr-2;
+    }
+}
+
+.m-field-row {
+    @apply my-6;
+}
+
+.auth-card {
+    @apply w-full max-w-sm bg-primary/10 px-6 py-8 border border-gray-300 rounded my-9 shadow-lg;
+}
+
+.input-field {
+    @apply relative pt-6 m-field-row;
+
+    &.input-with-label {
+        @apply mt-0;
+    }
+
+    &[password-toggle] {
+        button[password-toggle-button] {
+            @apply absolute right-2 top-[1.875rem] bg-gray-50 text-gray-400 hover:text-gray-600 px-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2;
+        }
+    }
+
+    input {
+        @apply w-full bg-gray-50 px-3 py-1.5 border-b-2 border-gray-300 rounded-t focus:outline-none focus:border-primary placeholder-transparent;
+    }
+
+    label {
+        @apply absolute top-0 left-3 text-sm text-primary transition-all
+            hover:cursor-text
+            peer-focus:text-sm peer-focus:top-0 peer-focus:text-primary
+            peer-placeholder-shown:top-[1.875rem] peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400;
+    }
+
+    .error-message {
+        @apply text-danger text-sm font-light;
+    }
+}
+
+.check-field {
+    @apply m-field-row;
+
+    input[type="checkbox"] {
         @apply mr-2;
     }
 }
