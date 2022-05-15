@@ -31,11 +31,18 @@
         <div class="api-key">
             <div class="font-medium text-2xl mb-6">Api Key</div>
             <div class="flex flex-row items-center">
-                <div class="flex-grow bg-gray-50 border border-gray-200 px-3 py-1 rounded">Sample Key</div>
-                <button class="button">
-                    <i class="fa-solid fa-copy fa-fw mr-2"></i>
-                    Copy
-                </button>
+                <div class="flex-grow">
+                    {{ __('You have') }}
+                    <span class="font-bold">{{ $apiKeyCount }}</span>
+                    {{ __('API Keys') }}.
+                    <span class="text-primary font-bold">{{ $activeApiKeyCount }}</span>
+                    @if ($activeApiKeyCount === 1)
+                        {{ __('of them is active') }}.
+                    @else
+                        {{ __('of them are active') }}.
+                    @endif
+                </div>
+                <a href="{{ route('api-keys.index') }}" class="button button-primary">Manage API Keys</a>
             </div>
         </div>
     </section>

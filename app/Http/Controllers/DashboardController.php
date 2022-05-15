@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ApiKey;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 class DashboardController extends Controller
@@ -17,6 +19,13 @@ class DashboardController extends Controller
 
     public function getDashboard()
     {
-        return view('dashboard');
+        $userApiKeyQuery = ApiKey::getByUserId(Auth::user()->id);
+        $apiKeyCount = $userApiKeyQuery->count();
+        $activeApiKeyCount = $userApiKeyQuery->where('is_active', true)->count();
+
+        return view('dashboard', [
+            'apiKeyCount' => $apiKeyCount,
+            'activeApiKeyCount' => $activeApiKeyCount,
+        ]);
     }
 }
