@@ -33,7 +33,7 @@
 }
 
 .responsive-table {
-    @apply relative overflow-x-auto shadow-md sm:rounded-lg;
+    @apply table-auto relative overflow-x-auto shadow-md sm:rounded-lg;
 
     table {
         @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
@@ -78,6 +78,10 @@
 
 .auth-card {
     @apply w-full max-w-sm bg-primary/10 px-6 py-8 border border-gray-300 rounded my-9 shadow-lg;
+}
+
+input.display-field {
+    @apply w-full bg-gray-50 px-3 py-1.5 border-y border-gray-300 rounded focus:outline-none placeholder-transparent;
 }
 
 .input-field {

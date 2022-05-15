@@ -18,7 +18,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th scope="col" class="max-w-sm">{{ __('API Key') }}</th>
+                            <th scope="col">{{ __('API Key') }}</th>
                             <th scope="col">{{ __('Status') }}</th>
                             <th scope="col">{{ __('Last Used') }}</th>
                             <th scope="col">{{ __('Generated') }}</th>
@@ -30,10 +30,11 @@
                     <tbody>
                         @foreach ($apiKeys as $apiKey)
                             <tr>
-                                <th scope="row" class="max-w-sm">
-                                    <div class="flex flex-row w-full gap-3">
-                                        <div class="flex-grow text-ellipsis overflow-hidden">{{ $apiKey->key }}</div>
-                                        <div>copy</div>
+                                <th scope="row">
+                                    <div class="flex flex-row items-center gap-2">
+                                        <input type="text" value="{{ $apiKey->key }}" class="display-field flex-grow"
+                                            readonly click-to-copy-source />
+                                        <button type="button" class="button" click-to-copy>copy</button>
                                     </div>
                                 </th>
                                 <td>{{ $apiKey->is_active_display }}</td>
@@ -42,11 +43,14 @@
                                 <td class="action-column">
                                     <div class="flex flex-row items-center justify-end gap-2">
                                         @if ($apiKey->is_active)
-                                            <a href="{{ route('api-keys.deactivate', ['id' => $apiKey->id]) }}">{{ __('Deactivate') }}</a>
+                                            <a
+                                                href="{{ route('api-keys.deactivate', ['id' => $apiKey->id]) }}">{{ __('Deactivate') }}</a>
                                         @else
-                                            <a href="{{ route('api-keys.activate', ['id' => $apiKey->id]) }}">{{ __('Activate') }}</a>
+                                            <a
+                                                href="{{ route('api-keys.activate', ['id' => $apiKey->id]) }}">{{ __('Activate') }}</a>
                                         @endif
-                                        <a href="{{ route('api-keys.delete', ['id' => $apiKey->id]) }}" class="button button-danger">
+                                        <a href="{{ route('api-keys.delete', ['id' => $apiKey->id]) }}"
+                                            class="button button-danger">
                                             <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </div>
