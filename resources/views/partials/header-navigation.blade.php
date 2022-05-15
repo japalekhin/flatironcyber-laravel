@@ -10,6 +10,7 @@
             @endif
         </nav>
         <nav class="flex flex-row gap-4 items-center">
+            <a href="{{ route('demo') }}" class="button button-success">{{ __('Demo') }}</a>
             @if (Auth::check())
                 <a href="{{ route('logout') }}">
                     <i class="fa-solid fa-sign-out"></i>

@@ -19,6 +19,10 @@
         @apply bg-primary text-white;
     }
 
+    &.button-success {
+        @apply bg-success text-white;
+    }
+
     &.button-danger {
         @apply bg-danger text-white;
     }

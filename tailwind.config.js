@@ -23,6 +23,7 @@ module.exports = {
                 primary: "#2e86de",
                 danger: "#ee5253",
                 success: "#10ac84",
+                info: "#0abde3",
             },
         },
     },

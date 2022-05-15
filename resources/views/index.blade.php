@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-    <section class="features container py-20">
+    <section class="features container p-section">
         <h2 class="text-center text-3xl font-bold mb-12">Features</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    <div class="features bg-[#1d3557] text-white py-20">
+    <div class="features bg-[#1d3557] text-white p-section">
         <section class="container">
             <h2 class="text-center text-3xl font-bold mb-12">Plans</h2>
 
